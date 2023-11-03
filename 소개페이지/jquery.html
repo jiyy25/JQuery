@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-2.2.4.js"
+        integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+    <style>
+        button {
+            margin-left: 200px;
+            /* 자바스크립트가 들어갈때 인라인 스타일로 들어가게됨. 하지만 !important가 제일 쎄다 
+            인라인스타일(html에 직접 들어간 스타일)>아이디>클래스>태그*/
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $("body").css({
+                "background-color": "red",
+                "color": "white"
+            })
+            $("body").append("<h1>제이쿼리</h1>")
+
+            $("h1").html("지우고 ");
+            $("h1").append("<span>이어서</span>")
+            $("h1").prepend("<span>맨 앞으로 </span>")
+
+            var flag = true; //true false만 갖겠다
+            var textinfo = $("h1").html();
+            $("button").click(function () {
+
+                if (flag) {
+                    $(this).html("삭제됨");
+                    $("h1").html("");
+                    flag = false;
+                } else {
+                    $(this).html("다른상황");
+                    $("h1").html(textinfo);
+                    flag = true;
+                }
+
+                // $("button").animate({ "marginLeft": 100 }) 
+                //->그냥 marginLeft 100으로 움직임. +=하면 현위치에서 marginLift 100움직인다..!
+                $("button").animate({ "marginLeft": "+=100" }, 1000)
+                $("button").animate({ "marginLeft": "+=100" }, 1000)
+                $("button").animate({ "marginLeft": "+=100" }, 1000)
+            })
+
+
+        })
+
+
+
+    </script>
+</head>
+
+<body>
+    <button>삭제</button>
+</body>
+
+</html>
