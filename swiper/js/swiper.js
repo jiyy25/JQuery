@@ -1,17 +1,17 @@
 $(document).ready(function () {
 
-    // setInterval, animate, css , appedTo
+    // setInterval, animate, css , appendTo
 
-    const aniw = $(".swiper-slide").width();
-    //$("swiper-slide").css("width");
-    //워낙 많이 써서 저런 표현식이 가능하게 됨... 값이 없으면 그대로 가져옴
+    let count = 0;
 
-    setInterval(function () {
-        $(".swiper-wrapper").animate({ "marginLeft": -aniw }, 400, function () {
-            $(".swiper-slide").eq(0).appendTo($(".swiper-wrapper"))
-            $(".swiper-wrapper").css("marginLeft", 0)
-        })
-    }, 3000)
+    setInterval(fadeani, 3000)
+
+    function fadeani() { //선언적함수
+        count++;
+        count = count % 3;
+        $(".swiper-slide").eq(count).addClass("on").siblings().removeClass("on");
+    }
+
 })
 
 
