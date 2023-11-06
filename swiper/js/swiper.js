@@ -12,15 +12,7 @@ $(document).ready(function () {
         //계속 반복..!
         $(".swiper-slide").eq(count).addClass("on").siblings().removeClass("on");
     }
-    // const anih = $(".swiper-slide").height();
 
-    // setInterval(function () {
-    //     $(".swiper-wrapper").animate({ "marginTop": -anih }, 300, function () {
-    //         $(".swiper-slide").eq(0).appendTo($(".swiper-wrapper"))
-    //         $(".swiper-wrapper").css("marginTop", 0)
-    //     })
-    // }, 3000);
-   
 })
 
 
