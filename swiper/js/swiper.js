@@ -1,15 +1,16 @@
 $(document).ready(function () {
 
-    // setInterval, animate, css , appedTo
+    // setInterval, animate, css , appendTo
 
-    const anih = $(".swiper-slide").height();
+    let count = 0;
 
-    setInterval(function () {
-        $(".swiper-wrapper").amimate({ "marginTop": -anih }, 400, function () {
-            $(".swiper-slide").eq(0).appendTo($(".swiper-wrapper"))
-            $(".swiper-wrapper").css("marginTop", 0)
-        })
-    })
+    setInterval(fadeani, 3000)
+
+    function fadeani() { //선언적함수
+        count++;
+        count = count % 3;
+        $(".swiper-slide").eq(count).addClass("on").siblings().removeClass("on");
+    }
 
 })
 
