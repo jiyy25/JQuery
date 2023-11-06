@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: red;
+}
+
+.bg-check {
+    background-color: gray;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.aic {
+    align-items: center;
+}
+
+.jcb {
+    justify-content: space-between;
+}
+
+.abs {
+    position: absolute;
+}
+
+.rel {
+    position: relative;
+}
+
+.z-1000 {
+    z-index: 1000;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.h-0 {
+    height: 0;
+}
+
+.h100 {
+    height: 100px;
+}
+
+.h200 {
+    height: 200px;
+}
+
+.h300 {
+    height: 300px;
+}
+
+.w-100 {
+    width: 100px;
+}
+
+.w-1200 {
+    width: 1200px;
+}
+
+.ofh {
+    overflow: hidden;
+}
+
+.d-block {
+    display: block;
+}
+
+.swiper-wrapper {
+    width: 1000000px;
+    /* d-flex때문에.. 넓이값을 많이 준다 */
+}
+
+.red{
+    background-color: red;
+}
+
+.yellow{
+    background-color: yellow;
+}
+
+.green{
+    background-color: green;
+}
