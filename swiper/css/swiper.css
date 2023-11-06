@@ -86,15 +86,15 @@ a:hover {
     /* d-flex때문에.. 넓이값을 많이 준다 */
 }
 
-.swiper-slide {
+/* .swiper-slide {
     opacity: 0;
     transition: 0.5s;
-}
+} */
 
-.on.swiper-slide {
+/* .on.swiper-slide {
     opacity: 1;
     z-index: 10000;
-}
+} */
 
 .red {
     background-color: red;
